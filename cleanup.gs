@@ -55,11 +55,11 @@ function Uninstall() {
 
 function cleanupGmail() {
     
-  var queryString =  ["category:promotions !label:keep older_than:30d",
-                      "category:social !label:keep older_than:30d",
-                      "category:forums !label:keep older_than:30d",
-                      "category:updates !label:keep older_than:30d",
-                      "label:crap !label:keep older_than:30d"];
+  var queryString =  ["category:promotions is:read !label:keep older_than:30d",
+                      "category:social is:read !label:keep older_than:30d",
+                      "category:forums is:read !label:keep older_than:30d",
+                      "category:updates is:read !label:keep older_than:30d",
+                      "label:crap is:read !label:keep older_than:30d"];
        
   queryString.forEach(cleanupQuery);
 
